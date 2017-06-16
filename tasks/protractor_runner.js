@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     var strArgs = ["seleniumAddress", "seleniumServerJar", "seleniumPort", "baseUrl", "rootElement", "browser", "chromeDriver", "chromeOnly", "directConnect", "sauceUser", "sauceKey", "sauceSeleniumAddress", "framework", "frameworkPath", "beforeLaunch", "onPrepare", "webDriverProxy"];
     var listArgs = ["specs", "exclude", "suite"];
     var boolArgs = ["includeStackTrace", "verbose"];
-    var objectArgs = ["params", "capabilities", "cucumberOpts", "mochaOpts"];
+    var objectArgs = ["params", "capabilities", "cucumberOpts", "mochaOpts", "jasmineNodeOpts"];
 
     var cmd = [protractorBinPath];
     if (!grunt.util._.isUndefined(opts.configFile)){

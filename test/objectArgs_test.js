@@ -18,3 +18,21 @@ exports.testCucumberOpts = function (test) {
     }
 };
 
+exports.testJasmineOpts = function (test) {
+    var cmd = 'grunt protractor:testTargetConfigFile --jasmineNodeOpts={\\"defaultTimeoutInterval\\":\\"500\\"} --verbose',
+        testDone = false;
+
+    runnerStdOut = exec(cmd);
+    if (typeof runnerStdOut === 'object') {
+        runnerStdOut = runnerStdOut.toString();
+    }
+
+    if (runnerStdOut.indexOf('Spawn node with arguments:') > -1 && runnerStdOut.indexOf('--jasmineNodeOpts.defaultTimeoutInterval 500') > -1) {
+        test.ok(true, 'JasmineNodeOpts test passed!');
+        test.done();
+    } else {
+        test.ok(false, 'Could not find jasmineNodeOpts');
+        test.done();
+    }
+};
+

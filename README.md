@@ -120,6 +120,7 @@ Supported arguments are below.
 * frameworkPath `string`: When `framework` is set to `custom`, set this path relative to the config file or absolute
 * cucumberOpts `object`: Cucumber framework options object to be passed to the test, e.g. require, tags and format
 * mochaOpts `object`: Mocha test framework options object to be passed
+* jasmineNodeOpts `object`: Jasmine test framework options object to be passed
 * beforeLaunch `string`: You can specify a file containing code to run once configs are read but before any environment setup. This will only run once, and before onPrepare.
 * onPrepare `string`: You can specify a file containing code to run once protractor is ready and available, and before the specs are executed. If multiple capabilities are being run, this will run once per capability.
 * webDriverProxy `string`: WebDriver proxy configuration to run remote tests
